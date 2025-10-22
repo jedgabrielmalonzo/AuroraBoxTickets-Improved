@@ -1,0 +1,114 @@
+/* Background image setup */
+body {
+    background-image: url('/images/carouselphotos/10.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the success message is centered and responsive */
+.success-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 15px;
+}
+
+/* Login link styling */
+.login-directory {
+    color: #ae78ff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.login-directory:hover {
+    color: #d5b9ff;
+}
+
+/* Main success message container */
+.container-success {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Checkbox image with pop-in animation */
+.checkboximg {
+    width: 100px;
+    margin-bottom: 20px;
+    animation: popIn 0.6s ease-out;
+}
+
+/* Pop-in animation keyframes */
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional: Space before footer */
+.divider {
+    height: 50px;
+}
+
+/* Footer adjustments to always stay at bottom */
+.footer-section {
+    background-color: #111;
+    color: #ccc;
+    margin-top: auto;
+    padding-top: 40px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #fff;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #ffd86b;
+}
+
+.footer-social-icon a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.copyright-area {
+    background: #000;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+    .container-success {
+        padding: 20px;
+    }
+
+    .checkboximg {
+        width: 80px;
+    }
+}

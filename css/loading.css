@@ -1,0 +1,47 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Progress bar container */
+.loading-progress-bar {
+  width: 200px;
+  height: 6px;
+  background: #C8A2C8;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#loadingScreen {
+    display: none; /* Hide by default */
+}
+/* Animated progress fill */
+.loading-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #9d50bb, #6e48aa);
+  animation: loadProgress 2s infinite;
+}
+
+/* Progress animation (looping left-to-right) */
+@keyframes loadProgress {
+  0%   { width: 0%; }
+  50%  { width: 100%; }
+  100% { width: 0%; }
+}
+
+/* Loading text style */
+.loading-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 1px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Subtle pulsing text effect */
+@keyframes pulse {
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}

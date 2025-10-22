@@ -1,0 +1,67 @@
+.why-aurorabox {
+    text-align: center;
+    padding: 20px 20px;
+    background: #fff;
+}
+
+.why-aurorabox h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.why-aurorabox .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-aurorabox .feature {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 12px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.why-aurorabox .feature:hover {
+    transform: translateY(-12px); /* lift effect */
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.why-aurorabox .feature i {
+    font-size: 50px;
+    color: #684d8f;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.why-aurorabox .feature:hover i {
+    transform: scale(1.2) rotate(-5deg); /* bounce + rotate effect */
+    color: #684d8f;
+}
+
+.why-aurorabox .feature h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.why-aurorabox .feature:hover h3 {
+    color: #684d8f;
+}
+
+.why-aurorabox .feature p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}

@@ -1,0 +1,399 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.cart-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Left side - Cart items */
+.cart-items {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Minimum width for cart items */
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    display: none; /* hide default checkbox */
+}
+
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #684D8F;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: #684D8F;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Remove Selected Button */
+.remove-btn {
+    padding: 8px 14px;
+    border: 1px solid #684D8F;
+    border-radius: 6px;
+    background: transparent;
+    color: #684D8F;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: #684D8F;
+    color: #fff;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 90px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-details {
+    flex: 1;
+}
+
+.cart-details h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-details p {
+    margin: 3px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.manage-links {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.manage-links a {
+    margin-right: 15px;
+    color: #684D8F;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.cart-quantity button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.cart-price {
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* Right side - Checkout */
+.cart-summary {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #684D8F;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #8564B5;
+}
+
+.cart-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjust this as needed */
+    padding: 30px 18px;
+    background: transparent; 
+    top: 0;
+    z-index: 100;
+}
+
+.cart-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #684D8F;
+}
+
+.remove-link {
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    color: #ff4d4d; /* Red icon color */
+    font-size: 24px; /* Icon size */
+    position: relative; /* Positioning for tooltip */
+}
+
+.remove-link:hover {
+    color: #ff1a1a; /* Darker red on hover */
+}
+
+.more-info-link {
+    font-size: 16px; /* Font size for details text */
+    color: #333; /* Text color */
+    text-decoration: none; /* No underline */
+    margin-right: 8px; /* Space between text and icon */
+}
+
+.more-info-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Tooltip styling */
+.remove-link:hover::after {
+    content: "Remove from cart"; /* Tooltip text */
+    position: absolute; /* Positioning */
+    bottom: 100%; /* Above the icon */
+    left: 50%; /* Center */
+    transform: translateX(-50%); /* Center the tooltip */
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 3px 5px; /* Smaller padding */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 12px; /* Smaller font size */
+    white-space: nowrap; /* No line breaks */
+    z-index: 10; /* Ensure tooltip is on top */
+    opacity: 1; /* Show tooltip */
+    visibility: visible; /* Show tooltip */
+    transition: opacity 0.3s; /* Fade effect */
+}
+
+/* 🌙 DARK MODE STYLES */
+body.dark-mode {
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+/* Container and cards */
+body.dark-mode .cart-items,
+body.dark-mode .cart-summary {
+    background: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    border: 1px solid #2c2c2c;
+}
+
+body.dark-mode .cart-header {
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .cart-item {
+    border-bottom: 1px solid #333;
+}
+
+/* Text colors */
+body.dark-mode .cart-details h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .cart-details p,
+body.dark-mode .manage-links a,
+body.dark-mode .cart-price,
+body.dark-mode .summary-line {
+    color: #cccccc;
+}
+
+body.dark-mode .manage-links a:hover {
+    color: #b19cd9;
+}
+
+/* Checkbox */
+body.dark-mode .checkmark {
+    border: 2px solid #b19cd9;
+}
+body.dark-mode .checkbox-container input:checked + .checkmark {
+    background: #b19cd9;
+}
+
+/* Buttons */
+body.dark-mode .remove-btn {
+    border-color: #b19cd9;
+    color: #b19cd9;
+}
+body.dark-mode .remove-btn:hover {
+    background: #b19cd9;
+    color: #121212;
+}
+
+body.dark-mode .checkout-btn {
+    background: #b19cd9;
+    color: #121212;
+}
+body.dark-mode .checkout-btn:hover {
+    background: #c7aef3;
+}
+
+/* Back button */
+body.dark-mode .back-btn {
+    background: #b19cd9;
+    color: #121212;
+}
+body.dark-mode .back-btn:hover {
+    background-color: #c7aef3;
+}
+
+/* Remove icon + tooltip */
+body.dark-mode .remove-link {
+    color: #ff7b7b;
+}
+body.dark-mode .remove-link:hover {
+    color: #ff9999;
+}
+body.dark-mode .remove-link:hover::after {
+    background-color: #333;
+    color: #fff;
+}
+
+/* More info link */
+body.dark-mode .more-info-link {
+    color: #ddd;
+}
+body.dark-mode .more-info-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .cart-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .cart-items {
+        margin-bottom: 20px; /* Space between cart and summary */
+        min-width: 100%; /* Full width on smaller screens */
+    }
+
+    .cart-title {
+        font-size: 24px; /* Reduce title size for smaller screens */
+    }
+
+    .cart-item img {
+        width: 70px; /* Smaller image size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .cart-details h3 {
+        font-size: 14px; /* Smaller heading size */
+    }
+
+    .cart-details p {
+        font-size: 12px; /* Smaller paragraph size */
+    }
+
+    .checkout-btn {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .remove-btn {
+        font-size: 12px; /* Smaller button text */
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-title {
+        font-size: 20px; /* Further reduce title size */
+    }
+
+    .cart-quantity button {
+        width: 20px; /* Smaller button size */
+        height: 20px; /* Smaller button size */
+    }
+
+    .manage-links {
+        font-size: 12px; /* Smaller link text */
+    }
+}

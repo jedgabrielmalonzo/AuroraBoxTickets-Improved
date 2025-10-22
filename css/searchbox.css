@@ -1,0 +1,64 @@
+.suggestion-list {
+    border: 1px solid #ccc;
+    background: white;
+    position: absolute;
+    z-index: 1000;
+    width: 30%;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.suggestion-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.suggestion-list {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) white;
+}
+
+.suggestion-list:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.suggestion-item {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+    transform: translateX(2px);
+}
+
+.suggestion-item strong {
+    color: purple;
+}
+
+.section-note {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 20px 0;
+    font-style: italic;
+}

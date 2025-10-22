@@ -1,0 +1,56 @@
+.slider1 {
+   background: white;
+    height: 120px; /* pwede i-adjust depende sa height ng logos */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 90%; /* gawing mas flexible kaysa fixed 960px */
+    max-width: 1200px; /* para hindi masyadong malapad */
+}
+
+.slider1::before,
+.slider1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+}
+
+.slider1::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider1::after {
+    right: 0;
+    transform: rotateZ(180deg);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slider1 .slide-track1 {
+    display: flex;
+    width: calc(220px * 14); /* base width * number of slides (14 total) */
+    animation: scroll 40s linear infinite;
+}
+
+.slider1 .slide1 {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 220px; /* base width per logo slot */
+    padding: 10px;
+}
+
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-220px * 7)); } /* slide by half the track */
+}
+
+.slider1 .slide1 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* para hindi ma-distort */
+}

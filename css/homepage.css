@@ -1,0 +1,241 @@
+/* Import desired font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    background: #FFFDF7;
+    margin: 0;
+}
+
+
+
+
+.carousel {
+    margin-top: 0px;
+    width: 100%;
+    aspect-ratio: 1280/370; /* Your exact image ratio */
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Cinema Section */
+.cinema-section {
+    margin: auto;
+    margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+    .cinema-section {
+        margin-left: 0; /* Center on smaller screens */
+        text-align: center;
+    }
+}
+
+.cinema-text {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 0;
+}
+
+@media (max-width: 480px) {
+    .cinema-text {
+        font-size: 1.8rem; /* Adjust text size for small screens */
+    }
+}
+
+/* Row with tighter gaps */
+.row.g-1 {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Card container and card styling */
+.cinema-card-container {
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.cinema-card {
+    border: 1px solid #dddddd38;
+    background-color: rgba(255, 255, 255, 0.004);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    color: #fff;
+    width: 90%;
+}
+
+.cinema-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+    .cinema-card {
+        width: 100%; /* Full width for medium screens */
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .cinema-card {
+        flex-direction: column;
+        max-height: none;
+        width: 95%; /* Full width for small screens */
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-poster2 {
+        width: 80%; /* Adjust poster size */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cinema-card {
+        width: 95%; /* Full width for extra small screens */
+    }
+}
+
+/* Buttons */
+.trailer-btn {
+    align-self: center;
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    font-weight: bold;
+    width: 220px; /* Default button width */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trailer-btn:hover {
+    background-color: #e0a800; /* Hover effect */
+}
+
+@media (max-width: 992px) {
+    .trailer-btn {
+        width: 180px; /* Adjust button width for medium screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .trailer-btn {
+        width: 160px; /* Adjust button width for small screens */
+        font-size: 13px; /* Adjust font size */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .trailer-btn {
+        width: 140px; /* Adjust button width for extra small screens */
+        font-size: 12px; /* Adjust font size */
+        padding: 7px; /* Adjust padding */
+    }
+}
+
+/* Content & text sizes */
+.movie-info h2 {
+    font-size: 20px; /* Default heading size */
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.movie-info p {
+    margin: 3px;
+    font-size: 14px; /* Default paragraph size */
+    color: #d5d5d5;
+}
+
+@media (max-width: 480px) {
+    .movie-info h2 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .movie-info p {
+        font-size: 13px; /* Adjust paragraph size */
+    }
+}
+
+/* Popular Now Section Heading */
+.popular-now-heading {
+  font-size: 22px; /* Default heading size */
+  font-weight: bold;
+  margin: 30px 0; /* Removed fixed left/right margin */
+  text-align: left; /* Matches other headings */
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .popular-now-heading {
+    text-align: center; /* Center heading on smaller screens */
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+}
+
+body.dark-mode .popular-now-heading {
+  color: #ffffff; /* Dark mode adjustments */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff; /* Dark mode text color */
+}
+
+
+.notification-dot {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%; /* Gawing bilog */
+    width: 18px;  /* fixed width */
+    height: 18px; /* fixed height */
+    display: none; /* Default hidden */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 18px; /* para gitna yung number */
+    box-sizing: border-box;
+}

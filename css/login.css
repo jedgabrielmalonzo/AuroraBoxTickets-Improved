@@ -1,0 +1,154 @@
+/* Background image styles */
+.log-bg-image {
+    background-size: cover; 
+    background-position: center; 
+    position: static;
+    background-repeat: no-repeat; 
+}
+
+
+ .sign-up-form {
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 100px;
+    }
+
+    .log-in-text {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+     color: #fdb11d ;
+    }
+
+    .sign-up-card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .sign-up-card .form-container {
+      width: 50%;
+      padding-right: 20px;
+    }
+    
+    .modal-content p{
+        color: #fdb11d;
+    }
+    .sign-up-card .home__img {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .sign-up-card .home__img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .input-div {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-div label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #fdb11d ;
+    }
+
+    .input-div input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+.welcome-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #FEB928 ;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #49326b ;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    
+    .btn:hover {
+    background-color: #BFB9FA;
+}
+
+    @media (max-width: 768px) {
+      .sign-up-card {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .sign-up-card .form-container,
+      .sign-up-card .home__img {
+        width: 100%;
+        padding: 0;
+      }
+
+      .sign-up-card .home__img {
+        margin-top: 20px;
+      }
+    }
+    
+
+.password-toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+.password-field {
+  position: relative;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home__hero-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+
+.modal-dialog{
+    background: transparent !important;
+    
+}
+

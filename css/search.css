@@ -1,0 +1,98 @@
+/* search.css - Styles for search page and filter sidebar */
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.filter-sidebar {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 20px 20px 20px;
+    min-width: 260px;
+    max-width: 320px;
+    flex: 0 0 320px;
+    margin-bottom: 24px;
+    position: sticky;
+    top: 24px;
+    height: fit-content;
+}
+.filter-sidebar h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #684D8F;
+    letter-spacing: 0.5px;
+}
+.search-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #684D8F;
+    margin: 0 0 0 0;
+    letter-spacing: 0.5px;
+}
+.search-query {
+    font-size: 1.15rem;
+    color: #333;
+    margin: 6px 0 0 0;
+    font-weight: 500;
+}
+.search-query span {
+    background: #f3eaff;
+    color: #684D8F;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-left: 2px;
+}
+.search-sub {
+    color: #888;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+@media (max-width: 900px) {
+    .search-container {
+        flex-direction: column;
+    }
+    .filter-sidebar {
+        max-width: 100%;
+        min-width: unset;
+        position: static;
+    }
+}
+.filter-group {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+.filter-group:last-child {
+    border-bottom: none;
+}
+.filter-sub {
+    margin-left: 1.5rem;
+    margin-top: 4px;
+    border-left: 2px solid #eee;
+    padding-left: 10px;
+    background: #faf8ff;
+    border-radius: 0 0 8px 8px;
+}
+.category-header:hover {
+    background: #f3eaff;
+    border-radius: 8px;
+}
+.dropdown-arrow {
+    margin-left: 8px;
+    color: #684D8F;
+    transition: transform 0.2s;
+    user-select: none;
+}
+.form-check-label {
+    font-weight: 400;
+    color: #444;
+}
+.form-check-input {
+    margin-right: 6px;
+}

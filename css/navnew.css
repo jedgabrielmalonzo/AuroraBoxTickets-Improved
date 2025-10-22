@@ -1,0 +1,377 @@
+/* Top contact bar */
+/* Top bar */
+.top-bar {
+  background: #684d8f;
+  padding: 0.5rem 1rem;
+  position: static;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.input-wrapper {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  width: 200px; /* Default width */
+}
+
+.input-wrapper input::placeholder {
+  color: #bbb;
+}
+
+.input-wrapper button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.top-bar .nav-link {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Transparent Navbar */
+.navbar {
+  background: #FFFDF7 !important;
+  position: fixed; /* Changed from relative to fixed */
+  top: 0; /* Ensure it sticks to the top */
+  left: 0; 
+  right: 0;
+  padding: 12px 0;
+  z-index: 1000;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.navbar-nav .nav-link {
+  color: #000000!important; 
+  font-weight: 500;
+  padding: 4px 10px; /* Smaller padding for buttons */
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #D2691E !important;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.buy-btn {
+  background-color: #D2691E;
+  color: #fff !important;
+  text-decoration: none; 
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 15px;
+  transition: 0.3s;
+  border: none;
+}
+
+.buy-btn:hover {
+  background-color: #B34714;
+  color: #fff !important;
+  text-decoration: none; 
+}
+
+.navbar .icon-link {
+  color: #4B2E2E;
+  font-size: 18px;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.navbar .icon-link:hover {
+  color: #684d8f;
+}
+
+.navbar .social-icons a {
+  color: #4B2E2E;
+  font-size: 16px;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.navbar .social-icons a:hover {
+  color: #D2691E;
+}
+/* Remove underline effect ONLY for dropdown items */
+.dropdown-menu .dropdown-item::before,
+.dropdown-menu .dropdown-item::after {
+  display: none !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f0f0f0; /* lighter gray */
+  color: #684d8f; /* match your theme color */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+  position: relative;
+}
+
+.navbar-nav .nav-item a {
+  text-decoration: none;
+  color: #684d8f;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navbar-nav .nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover::before {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.navbar-nav .nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  color: #684d8f;
+  background-color: #684d8f;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item a:hover::after {
+  width: 100%;
+  background-color: #684d8f;
+}
+
+.navbar-nav .nav-link {
+  padding: 8px 20px;
+}
+
+/* Navbar icons */
+.navbar-icons .nav-icon {
+  position: relative;
+  color: #684d8f;
+  font-size: 18px;
+  margin-left: 15px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.navbar-icons .nav-icon:hover {
+  color: #684d8f;
+}
+
+.navbar-icons .nav-icon::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.navbar-icons .nav-icon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  background: #A182A1;
+  color: #fff;
+  padding: 8px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.5s, transform 0.5s;
+  overflow: hidden;
+  width: 40px;
+}
+
+.logout-btn:hover {
+  background: #BC94D4;
+  transform: scale(1);
+  width: 100px;
+}
+
+.logout-btn i {
+  margin-right: 8px;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.logout-text {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.logout-btn:hover .logout-text {
+  opacity: 1;
+}
+
+#ticket-slider {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#ticket-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.gap-3 {
+  gap: 2rem !important;
+}
+
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-nav-btn.left {
+  left: 0;
+}
+
+.slider-nav-btn.right {
+  right: 0;
+}
+
+.slider-nav-btn:hover {
+  background-color: #f0f0f0;
+  border-color: #999;
+  transform: scale(1.1);
+}
+
+.slider-nav-btn:active {
+  background-color: #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .slider-nav-btn {
+    display: none !important;
+  }
+
+  .top-bar {
+    padding: 0.5rem; /* Reduce padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items */
+  }
+
+  .input-wrapper {
+    width: 100%; /* Full width for input wrapper */
+    margin-bottom: 10px; /* Space out from other elements */
+  }
+
+  .navbar {
+    padding: 10px; /* Reduce padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically */
+    width: 100%; /* Full width for nav items */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px; /* Adjust padding for mobile */
+    width: 100%; /* Full width for nav links */
+    text-align: center; /* Center text */
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0; /* Add margin for spacing between items */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .icon-link {
+    font-size: 16px; /* Adjust icon size */
+  }
+
+  .navbar .social-icons a {
+    font-size: 14px; /* Adjust social icon size */
+  }
+
+  .logout-btn {
+    width: 100%; /* Full width for logout button */
+    justify-content: center; /* Center content */
+  }
+
+  .logout-text {
+    font-size: 12px; /* Adjust text size */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px; /* Smaller font for mobile */
+  }
+}
+
+/* Toggle Icon Color */
+.navbar-toggler {
+  color: #1e1e1e; /* Change the color of the toggle icon */
+}
+
+/* If using Bootstrap's default styling */
+.navbar-toggler-icon {
+  background-color: #1e1e1e; /* Change background color for the default icon */
+}

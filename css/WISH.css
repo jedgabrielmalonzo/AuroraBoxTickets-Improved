@@ -1,0 +1,339 @@
+/* 🔹 Wishlist Container */
+.wish-top {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering the title and back button */
+  padding: 30px 18px; /* Same padding as cart */
+  background: transparent; 
+  top: 0;
+  z-index: 100; /* Keep on top */
+}
+
+.back-btn {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 2px solid #684D8F;
+  border-radius: 5px;
+  background-color: #684D8F;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  background-color: #8A6FAF;
+  color: white;
+}
+
+.wish-title {
+  font-size: 30px; /* Same font size as cart title */
+  font-weight: bold;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #684D8F; /* Same color as cart title */
+}
+
+/* Wishlist Controls (Sorting & Filtering) */
+.wishlist-controls {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center;       /* Center items vertically */
+    gap: 12px;                 /* Space between controls */
+    margin: 12px 200px;       /* Margin top/bottom and fixed left/right */
+    flex-wrap: wrap;           /* Allow items to wrap on smaller screens */
+}
+
+.wishlist-select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wishlist-select:hover,
+.wishlist-select:focus {
+  border-color: #684D8F;
+  box-shadow: 0 0 4px rgba(104, 77, 143, 0.3);
+}
+
+/* Wishlist Grid Layout (Responsive) */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px); /* fixed width cards */
+  gap: 16px;
+  justify-content: center;
+  margin: 20px;
+  padding: 0 10px;
+}
+
+/* Wishlist Card */
+.wishlist-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  width: 280px; /* 👈 fixed width */
+  min-height: 320px; /* para hindi bumagsak height */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Wishlist Image */
+.wishlist-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Info Section */
+.wishlist-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-name {
+  font-size: 16px;
+  margin: 0 0 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wishlist-description {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+/* ⭐ Wishlist Rating Stars */
+.wishlist-rating {
+  margin: 6px 0 10px;   /* spacing above/below rating */
+  font-size: 14px;       /* star size */
+  font-weight: bold;     
+  color: #ccc;           /* default empty star color */
+  display: flex;
+  align-items: center;
+  gap: 2px;              /* space between stars */
+}
+
+.wishlist-rating span.filled {
+  color: #FFD700;        /* gold stars */
+}
+
+.wishlist-rating .rating-value {
+  margin-left: 6px;      /* space between stars and numeric rating */
+  font-weight: normal;
+  font-size: 13px;
+  color: #333;           /* optional, adjust for dark mode */
+}
+
+.see-more-btn {
+  background: none;
+  border: none;
+  color: #684D8F;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 4px;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.see-more-btn:hover {
+  color: #3a2a53;
+}
+
+/* Actions Row */
+.wishlist-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* See Details Button */
+.see-details-btn {
+  background-color: #3a2a53;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.see-details-btn:hover {
+  background-color: #684D8F;
+  transform: scale(1.05);
+}
+
+/* Trash Button */
+.trash-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #3a2a53;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.trash-btn:hover {
+  transform: scale(1.2);
+  color: #a02020;
+}
+
+/* Empty Text */
+.empty-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Responsive (Tablet & Mobile) */
+@media (max-width: 992px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+
+  .back-btn {
+    padding: 8px 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(1, 1fr); /* Full width on small screens */
+  }
+
+  .wish-title {
+    font-size: 18px; /* Reduce title size for smaller screens */
+  }
+
+  .back-btn {
+    font-size: 12px; /* Smaller button text */
+  }
+}
+
+/* Dark mode adjustment */
+body.dark-mode {
+  --bg: #0f0f0f;
+  --card: #1a1a1a;
+  --ink-900: #f3f3f3;
+  --ink-700: #d1d1d1;
+  --ink-500: #a1a1a1;
+  --ink-300: #666;
+  --shadow: 0 10px 25px rgba(0,0,0,.4);
+  background: var(--bg);
+  color: var(--ink-900);
+}
+
+/* Profile Card & Menu */
+body.dark-mode .acc-profile-card,
+body.dark-mode .acc-menu {
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+body.dark-mode .acc-menu a {
+  color: var(--ink-700);
+}
+
+body.dark-mode .acc-menu a.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+body.dark-mode .acc-card {
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+body.dark-mode .acc-sub {
+  color: var(--ink-500);
+}
+
+body.dark-mode .acc-input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #222;
+  color: var(--ink-900);
+  border-color: #444;
+}
+
+body.dark-mode .acc-btn {
+  background: #222;
+  color: var(--ink-900);
+  border: 1px solid #444;
+}
+
+body.dark-mode .acc-btn.acc-primary {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+body.dark-mode .acc-btn.acc-danger {
+  background: --warn;
+  color: #fff;
+  border-color: var(--warn);
+}
+
+body.dark-mode .acc-item {
+  background: var(--card);
+  border: 1px solid #333;
+}
+
+body.dark-mode .acc-item-sub {
+  color: var(--ink-500);
+}
+
+body.dark-mode .acc-success {
+  background: rgba(34,197,94,0.15);
+  color: #4ade80;
+}
+
+body.dark-mode .acc-error {
+  background: rgba(239,68,68,0.15);
+  color: #f87171;
+}
+
+body.dark-mode .acc-info-card {
+  background: #222;
+  border-color: #333;
+}
+
+body.dark-mode .acc-info-card h4 {
+  color: var(--ink-700);
+}
+
+body.dark-mode .acc-info-card p {
+  color: var(--ink-900);
+}
+
+body.dark-mode .acc-heart-btn svg {
+  fill: var(--brand);
+}
+
+body.dark-mode .acc-heart-btn.unhearted svg {
+  fill: #555;
+}
