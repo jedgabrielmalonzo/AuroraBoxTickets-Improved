@@ -1,0 +1,101 @@
+.sidebar {
+    width: 250px;
+    background-color: #321d54;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    z-index: 10; /* para di above anything else siya */
+    overflow-y: auto; /* ✅ allow vertical scroll */
+}
+
+.logoadmin {
+    width: 200px;
+    align-items: center;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.sidebar a:hover {
+    color: #ffd426;
+}
+
+.sidebar-p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #f6c053;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sidebar-logout {
+    background-color: #f5bf61; /* Red color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    text-align: center;
+}
+
+
+
+.sidebar-logout:hover {
+    background-color: #e79e00; /* Slightly darker red on hover */
+}
+
+
+
+.logoadmin {
+    width: 100%;
+    height: auto;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s; /* Add transition to main content */
+}
+@media (max-width: 768px) {
+    .sidebar {
+        left: -250px; /* Initially hide sidebar */
+        transition: left 0.3s;
+    }
+    .sidebar.active {
+        left: 0; /* Show sidebar when active */
+    }
+    .main-content {
+        margin-left: 0; /* Remove margin on small screens */
+    }
+}
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    position: absolute; /* Position the button */
+    z-index: 1100; /* Ensure it's above the sidebar */
+}
+.line {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon on small screens */
+        top: 15px; /* Position it at the top */
+        left: 15px; /* Position it from the left */
+    }
+}

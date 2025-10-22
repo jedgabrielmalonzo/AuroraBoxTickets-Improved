@@ -1,0 +1,72 @@
+/* General page styling */
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 100px;
+    padding: 20px;
+    width: 100%; 
+}
+.admin-name {
+    float: right;
+    width: 700px;
+    font-weight: bold;
+    color: #321d54;
+    margin-top: 20px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.header span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.settings img {
+    width: 24px;
+    
+    cursor: pointer;
+}
+
+/* Dashboard cards styling */
+.dashboard-cards {
+    display: flex;
+    gap: 100px;
+    justify-content: center;    
+    margin-top: 60px;
+    padding: 20px;  /* Add padding on the left and right */
+}
+
+.card {
+    background-color: #F6E4B6;
+    color: #3D2C4E;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+}

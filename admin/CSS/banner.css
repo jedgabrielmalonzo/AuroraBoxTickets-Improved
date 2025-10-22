@@ -1,0 +1,174 @@
+
+
+/* Add these styles after your existing CSS */
+.drag-handle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #ccc;
+    cursor: move;
+    font-size: 12px;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.banner-item {
+    position: relative;
+}
+
+.sortable-list .card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.banner-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+}
+
+.sortable-chosen {
+    transform: scale(1.05);
+}
+
+.sortable-drag {
+    background: #f8f9fa;
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+
+:root {
+  --primary: #684D8F;
+  --primary-dark: #563E77;
+  --accent: #684D8F;
+  --bg: #f7f7f8;
+  --card-bg: #fff;
+  --text: #333;
+  --muted: #666;
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: var(--bg); 
+    color: var(--text);
+    margin: 0; 
+}
+
+.card { 
+    background: var(--card-bg);
+    padding: 1.5rem; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem; 
+}
+
+form#bannerForm input.form-control, 
+form#bannerForm textarea.form-control { 
+    padding: 0.5rem; 
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+form#bannerForm button.btn { 
+    background: var(--accent); 
+    color: white; 
+    font-weight: 600; 
+    padding: 0.6rem; 
+    border-radius: 8px; 
+    border: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+form#bannerForm button.btn:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 16px rgba(104,77,143,0.3); 
+}
+
+.banner-thumb { 
+    width: 100%; 
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px; 
+}
+
+.actions { 
+    display: flex;
+    gap: 0.5rem; 
+    justify-content: center;
+}
+
+/* Drag and Drop Styles */
+.drag-handle {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #ccc;
+    cursor: move;
+    font-size: 12px;
+    background: rgba(255,255,255,0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.banner-item {
+    position: relative;
+}
+
+.sortable-list .card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.sortable-ghost {
+    opacity: 0.4;
+}
+
+.sortable-chosen {
+    transform: scale(1.05);
+}
+
+.sortable-drag {
+    background: #f8f9fa;
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.small {
+    font-size: 0.85rem;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+

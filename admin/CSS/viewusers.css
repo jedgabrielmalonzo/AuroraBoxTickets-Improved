@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Para maiwasan yung horizontal scroll */
+}
+
+.main-content {
+    margin-left: 270px; /* Space beside sidebar */
+    padding: 20px;
+    flex: 1;
+    margin-top: 0;
+    max-width: calc(100% - 270px); 
+}
+
+.text-center {
+    margin: 50px 0;
+}
+
+h3 {
+    color: #321d54;
+}
+
+.table img {
+    max-height: 50px;
+    border-radius: 5px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.btn-primary, .btn-danger, .btn-warning {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #321d54;
+    border: #321d54;
+}
+
+
+#alertContainer {
+    position: relative; /* relative para stay lang sya sa main content */
+    margin-bottom: 20px; /* space under alert */
+    width: calc(100% - 40px); 
+    max-width: 100%; 
+    z-index: 1000; 
+}
+
+.alert {
+    margin: 0;
+    width: 100%; 
+    box-sizing: border-box; 
+}

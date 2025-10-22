@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #49316B;
+    background: linear-gradient(to top, rgb(0, 0, 0), #49316B, rgba(0, 0, 0, 0.911));
+    color: #5a5c69;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for centering content */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px;
+    padding-right: 70px ;
+    width: 100%;
+    max-width: 400px; /* Ensures the form doesn't stretch too wide */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-admin {
+    width: 350px;
+    padding-left: 45px;
+}
+/* Input Fields */
+.input-div {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.input-div label {
+    font-weight: bold;
+    color: #49316B;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-div input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d3e2;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    color: #6e707e;
+    background-color: #f8f9fc;
+    transition: all 0.3s ease;
+}
+
+/* Input Field Focus */
+.input-div input:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 10px rgba(78, 115, 223, 0.5);
+    background-color: #ffffff;
+    outline: none;
+}
+
+.input-div input::placeholder {
+    color: #a6a9b4;
+    font-style: italic;
+}
+
+/* Error message */
+em {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button.btn {
+    margin: 1rem auto;
+    padding: 0.75rem;
+    width: 120px;
+    font-weight: bold;
+    background-color: #D29521;
+    color: #ffffff;
+    border-radius: 0.75rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* Button Hover Effect */
+button.btn:hover {
+    background-color: #e9c67f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Link Styling */
+p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+p a {
+    color: #D29521;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

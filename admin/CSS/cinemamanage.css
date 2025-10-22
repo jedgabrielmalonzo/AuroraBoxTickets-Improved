@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    margin-top: 0px;
+}
+
+.cinema-manage-container {
+    width: 150vh;
+}
+.admin-name {
+    float: right;
+    width: 700px;
+    font-weight: bold;
+    color: #321d54;
+    margin-top: 20px;
+    margin-right: 15px;
+    text-align: right;
+}
+
+
+.text-center{
+    margin-top: 50px;
+}
+h2, h3 {
+    color: #321d54;
+}
+.table img {
+    max-height: 50px;
+    border-radius: 5px;
+}
+.modal-content {
+    border-radius: 10px;
+}
+.btn-primary, .btn-danger, .btn-warning {
+    border-radius: 5px;
+}
+.btn-primary {
+    background-color: #321d54;
+    border: #321d54;
+}
+
+
+.btn {
+    background-color: #f7b83b;
+    color: black;
+    border: #f7b83b;
+}
